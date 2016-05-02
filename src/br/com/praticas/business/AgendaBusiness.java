@@ -21,7 +21,7 @@ public class AgendaBusiness implements IAgendaBusiness{
     // O BANCO É ESTARTADO SOMENTE UMA VEZ
         private Facade fachada = Facade.getInstance();
     
-    
+ 
  private  BeansAgenda agenda = new BeansAgenda();
     
     public void slavarNaAgenda(String NomePac, String NomeMed, String Turno, String Motivo, Date Data, String Status) {
