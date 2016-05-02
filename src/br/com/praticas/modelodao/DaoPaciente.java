@@ -23,8 +23,8 @@ public class DaoPaciente {
     String nomeBairro;
     String nomeCidade;
     String nomeUF;
-    int codBai;
-    int codCid;
+    int codBairro;
+    int codCidade;
     int codUf;
     
     public void Salvar(BeansPacientes pac){
@@ -35,7 +35,7 @@ public class DaoPaciente {
         conex.conexao();
         try {
             PreparedStatement pst = conex.con.prepareStatement("insert into pacientes (paci_nome,paci_cpf,paci_rg,paci_telefone,paci_rua,paci_numero,paci_cep,paci_complemento,paci_baicodigo,paci_cidcodigo,paci_ufcodigo,paci_nasc) values(?,?,?,?,?,?,?,?,?,?,?,?)");
-            pst.setString(1,pac.getNomePac());
+            pst.setString(1,pac.getNomePaciente());
             pst.setString(2,pac.getCpf());
             pst.setString(3,pac.getRg());
             pst.setString(4,pac.getTelefone());
@@ -43,8 +43,8 @@ public class DaoPaciente {
             pst.setString(6,pac.getNumero());
             pst.setString(7,pac.getCep());
             pst.setString(8,pac.getComplemento());
-            pst.setInt(9, codBai);
-            pst.setInt(10, codCid);
+            pst.setInt(9, codBairro);
+            pst.setInt(10, codCidade);
             pst.setInt(11, codUf);
             pst.setString(12,pac.getNasc());
             pst.execute();
@@ -65,7 +65,7 @@ public class DaoPaciente {
         conex.conexao();
         try {
             PreparedStatement pst = conex.con.prepareStatement("update pacientes set paci_nome=?, paci_cpf=?,paci_rg=?,paci_telefone=?,paci_rua=?,paci_numero=?,paci_cep=?,paci_complemento=?,paci_baicodigo=?,paci_cidcodigo=?,paci_ufcodigo=?,paci_nasc=? where paci_codigo=? ");
-            pst.setString(1,pac.getNomePac());
+            pst.setString(1,pac.getNomePaciente());
             pst.setString(2,pac.getCpf());
             pst.setString(3,pac.getRg());
             pst.setString(4,pac.getTelefone());
@@ -73,8 +73,8 @@ public class DaoPaciente {
             pst.setString(6,pac.getNumero());
             pst.setString(7,pac.getCep());
             pst.setString(8,pac.getComplemento());
-            pst.setInt(9, codBai);
-            pst.setInt(10, codCid);
+            pst.setInt(9, codBairro);
+            pst.setInt(10, codCidade);
             pst.setInt(11, codUf);
             pst.setString(12,pac.getNasc());
             pst.setInt(13, pac.getCodPac());
@@ -92,7 +92,7 @@ public class DaoPaciente {
     conex.executarSql("select *from bairro where bainome ='"+nome+"'");
         try {
             conex.rs.first();
-            codBai = conex.rs.getInt("baicodigo");
+            codBairro = conex.rs.getInt("baicodigo");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,"Erro ao efetuar busca de Bairros"+ex);
         }
@@ -105,7 +105,7 @@ public class DaoPaciente {
     conex.executarSql("select *from cidade where cidnome ='"+nome+"'");
         try {
             conex.rs.first();
-            codCid = conex.rs.getInt("cidcodigo");
+            codCidade = conex.rs.getInt("cidcodigo");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,"Erro ao efetuar busca de Cidades"+ex);
         }
@@ -136,10 +136,10 @@ public class DaoPaciente {
             buscaNomeBairro(conex.rs.getInt("paci_baicodigo"));
             buscaNomeCidade(conex.rs.getInt("paci_cidcodigo"));
             buscaNomeUF(conex.rs.getInt("paci_ufcodigo"));
-            pac.setNomePac(conex.rs.getString("paci_nome"));
+            pac.setNomePaciente(conex.rs.getString("paci_nome"));
             pac.setCep(conex.rs.getString("paci_cep"));
             pac.setCpf(conex.rs.getString("paci_cpf"));
-            pac.setCodPac(conex.rs.getInt("paci_codigo"));
+            pac.setCodPaciente(conex.rs.getInt("paci_codigo"));
             pac.setComplemento(conex.rs.getString("paci_complemento"));
             pac.setNasc(conex.rs.getString("paci_nasc"));
             pac.setNumero(conex.rs.getString("paci_numero"));

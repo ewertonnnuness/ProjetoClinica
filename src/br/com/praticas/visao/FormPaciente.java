@@ -497,7 +497,7 @@ public class FormPaciente extends javax.swing.JFrame {
         if (flag == 1){
 
         
-        pac.setNomePac(jTextFieldNome.getText());
+        pac.setNomePaciente(jTextFieldNome.getText());
         pac.setNasc(jFormattedTextFieldNasc.getText());
         pac.setCpf(jFormattedTextFieldCpf.getText());
         pac.setRg(jFormattedTextFieldRg.getText());
@@ -544,7 +544,7 @@ public class FormPaciente extends javax.swing.JFrame {
         
         }
         else{
-        pac.setNomePac(jTextFieldNome.getText());
+        pac.setNomePaciente(jTextFieldNome.getText());
         pac.setNasc(jFormattedTextFieldNasc.getText());
         pac.setCpf(jFormattedTextFieldCpf.getText());
         pac.setRg(jFormattedTextFieldRg.getText());
@@ -556,7 +556,7 @@ public class FormPaciente extends javax.swing.JFrame {
         pac.setNomeBairro((String) jComboBoxBairro.getSelectedItem());
         pac.setNomeCidade((String) jComboBoxCidade.getSelectedItem());
         pac.setUF((String) jComboBoxUf.getSelectedItem());
-        pac.setCodPac(Integer.parseInt( jTextFieldCodPac.getText()));
+        pac.setCodPaciente(Integer.parseInt( jTextFieldCodPac.getText()));
         dao.Alterar(pac);
         preencherTabela("select paci_codigo,paci_nome,paci_telefone,paci_cpf,cidnome from pacientes inner join cidade on paci_cidcodigo = cidcodigo order by paci_nome;");
         
@@ -665,7 +665,7 @@ public class FormPaciente extends javax.swing.JFrame {
         
         pac.setPesquisa(jTextFieldPesquisa.getText());
         BeansPacientes pac1 =  dao.buscaPaciente(pac);
-        jTextFieldNome.setText(pac1.getNomePac());
+        jTextFieldNome.setText(pac1.getNomePaciente());
         jTextFieldCodPac.setText(String.valueOf(pac1.getCodPac()));
         jFormattedTextFieldNasc.setText(pac1.getNasc());
         jFormattedTextFieldCpf.setText(pac1.getCpf());
@@ -691,7 +691,7 @@ public class FormPaciente extends javax.swing.JFrame {
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
         resposta = JOptionPane.showConfirmDialog(rootPane,"Deseja Realmente Excluir?");
         if(resposta == JOptionPane.YES_OPTION){
-        pac.setCodPac(Integer.parseInt(jTextFieldCodPac.getText()));
+        pac.setCodPaciente(Integer.parseInt(jTextFieldCodPac.getText()));
         dao.excluir(pac);
         preencherTabela("select paci_codigo,paci_nome,paci_telefone,paci_cpf,cidnome from pacientes inner join cidade on paci_cidcodigo = cidcodigo order by paci_nome;");
         

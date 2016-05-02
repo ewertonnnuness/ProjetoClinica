@@ -5,21 +5,21 @@ package br.com.praticas.modelobeans;
 
 public class BeansFuncionario {
     
-    private long matricula;
+    private int matricula;
     private String nome;
     private String funcao;
     private int cpf;
     private String pesquisa;
 
     /**
-     * @return the codigo
+     * @return the matricula
      */
-    public long getMatricula() {
+    public int getMatricula() {
         return matricula;
     }
 
     /**
-     * @param codigo the codigo to set
+     * @param matricula the matricula to set
      */
     public void setMatricula(int matricula) {
         this.matricula = matricula;
@@ -40,28 +40,28 @@ public class BeansFuncionario {
     }
 
     /**
-     * @return the especialidade
+     * @return the funcao
      */
     public String getFuncao() {
         return funcao;
     }
 
     /**
-     * @param especialidade the especialidade to set
+     * @param funcao the funcao to set
      */
     public void setFuncao(String funcao) {
         this.funcao = funcao;
     }
 
     /**
-     * @return the crm
+     * @return the cpf
      */
     public int getCpf() {
         return cpf;
     }
 
     /**
-     * @param crm the crm to set
+     * @param cpf the cpf to set
      */
     public void setCpf(int cpf) {
         this.cpf = cpf;
@@ -81,12 +81,10 @@ public class BeansFuncionario {
         this.pesquisa = pesquisa;
     }
 
-    public void setMatricula(long matricula) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public void setCodigo(int aInt) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
     
 }

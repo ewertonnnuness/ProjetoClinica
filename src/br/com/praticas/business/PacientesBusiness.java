@@ -18,9 +18,9 @@ public class PacientesBusiness {
 
     private BeansPacientes pacientes = new BeansPacientes();
 
-    private void salvarPacientes(long codPac, String nomePaciente, String nascimento, String cpf, String rg, String telefone, String rua, String numero, String complemento, String UF, String nomeCidade, String cep, String nomeBairro, String pesquisa) {
+    private void salvarPacientes(int codigoPaciente, String nomePaciente, String nascimento, String cpf, String rg, String telefone, String rua, String numero, String complemento, String UF, String nomeCidade, String cep, String nomeBairro, String pesquisa) {
 
-        pacientes.setCodPaciente(codPac);
+        pacientes.setCodPaciente(codigoPaciente);
         pacientes.setNomePaciente(nomePaciente);
         pacientes.setNascimento(nascimento);
         pacientes.setCpf(cpf);
@@ -37,7 +37,7 @@ public class PacientesBusiness {
         
        fachada.salvarOsPacientes(pacientes); 
     }
-public void salvarOsPacientes(long codPac, String nomePaciente, String nascimento, String cpf, String rg, String telefone, String rua, String numero, String complemento, String UF, String nomeCidade, String cep, String nomeBairro, String pesquisa){
+public void salvarOsPacientes(int codigoPaciente, String nomePaciente, String nascimento, String cpf, String rg, String telefone, String rua, String numero, String complemento, String UF, String nomeCidade, String cep, String nomeBairro, String pesquisa){
     throw new UnsupportedOperationException("Not supported yet.");
 }
 }

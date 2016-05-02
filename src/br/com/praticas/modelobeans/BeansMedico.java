@@ -5,7 +5,7 @@ package br.com.praticas.modelobeans;
 
 public class BeansMedico {
     
-    private long codigo;
+    private int codigo;
     private String nome;
     private String especialidade;
     private int crm;
@@ -14,7 +14,7 @@ public class BeansMedico {
     /**
      * @return the codigo
      */
-    public long getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
@@ -81,8 +81,5 @@ public class BeansMedico {
         this.pesquisa = pesquisa;
     }
 
-    public void setCodigo(long codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

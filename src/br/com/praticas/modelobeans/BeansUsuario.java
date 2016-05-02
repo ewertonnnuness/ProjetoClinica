@@ -7,7 +7,7 @@ package br.com.praticas.modelobeans;
  */
 public class BeansUsuario {
     
-    private long usoCod;
+    private int usoCod;
     private String usuNome;
     private String usuTipo;
     private String usuSenha;
@@ -16,14 +16,14 @@ public class BeansUsuario {
     /**
      * @return the usoCod
      */
-    public long getUsoCod() {
+    public int getUsoCod() {
         return usoCod;
     }
 
     /**
      * @param usoCod the usoCod to set
      */
-    public void setUsoCod(long usoCod) {
+    public void setUsoCod(int usoCod) {
         this.usoCod = usoCod;
     }
 
@@ -83,7 +83,6 @@ public class BeansUsuario {
         this.usuPesquisa = usuPesquisa;
     }
 
-    
-    
+   
     
 }

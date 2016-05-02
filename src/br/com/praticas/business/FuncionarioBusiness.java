@@ -18,7 +18,7 @@ public class FuncionarioBusiness {
        
     private BeansFuncionario funcionario = new BeansFuncionario();
     
-    private void salvarFuncionario(long matricula, String nome, String funcao, int cpf, String pesquisa ){
+    private void salvarFuncionario(int matricula, String nome, String funcao, int cpf, String pesquisa ){
      
         funcionario.setMatricula(matricula);
         funcionario.setNome(nome);
@@ -30,7 +30,7 @@ public class FuncionarioBusiness {
               
     
     }
-    public void salvarOFuncionario(long matricula, String nome, String funcao, int cpf, String pesquisa){
+    public void salvarOFuncionario(int matricula, String nome, String funcao, int cpf, String pesquisa){
          throw new UnsupportedOperationException("Not supported yet.");
     }
     

@@ -18,7 +18,7 @@ public class MedicoBusiness {
     
     private BeansMedico medico = new BeansMedico();
     
-    private void salvarMedico(long codigo, String nome, String especialidade,int crm, String pesquisa  ){
+    private void salvarMedico(int codigo, String nome, String especialidade,int crm, String pesquisa  ){
         medico.setCodigo(codigo);
         medico.setNome(nome);
         medico.setEspecialidade(especialidade);
@@ -29,7 +29,7 @@ public class MedicoBusiness {
                
         
     }
-    public void salvarOMedico(long codigo, String nome, String especialidade,int crm, String pesquisa ){
+    public void salvarOMedico(int codigo, String nome, String especialidade,int crm, String pesquisa ){
          throw new UnsupportedOperationException("Not supported yet.");
     }
 }

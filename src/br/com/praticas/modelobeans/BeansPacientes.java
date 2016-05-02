@@ -5,13 +5,10 @@
  */
 package br.com.praticas.modelobeans;
 
-/**
- *
- * @author HugoNathan
- */
+
 public class BeansPacientes {
     
-    private long codPaciente;
+    private int codPaciente;
     private String nomePaciente;
     private String nascimento;
     private String cpf;
@@ -29,14 +26,14 @@ public class BeansPacientes {
     /**
      * @return the codPaciente
      */
-    public long getCodPaciente() {
+    public int getCodPaciente() {
         return codPaciente;
     }
 
     /**
      * @param codPaciente the codPaciente to set
      */
-    public void setCodPaciente(long codPaciente) {
+    public void setCodPaciente(int codPaciente) {
         this.codPaciente = codPaciente;
     }
 
@@ -222,22 +219,6 @@ public class BeansPacientes {
         this.pesquisa = pesquisa;
     }
 
-    public void setNomePac(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setCodPac(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setNasc(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public String getNomePac() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public String getNasc() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -246,8 +227,10 @@ public class BeansPacientes {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
+    public void setNasc(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     
 }

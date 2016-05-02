@@ -18,9 +18,9 @@ public class UsuarioBusiness {
     
     private BeansUsuario usuarios = new BeansUsuario();
     
-     private void salvarUsuarios (long usoCod, String usuNome, String usuTipo, String usuSenha, String usuPesquisa){
+     private void salvarUsuarios (int usuarioCod, String usuNome, String usuTipo, String usuSenha, String usuPesquisa){
          
-         usuarios.setUsoCod(usoCod);
+         usuarios.setUsoCod(usuarioCod);
          usuarios.setUsuNome(usuNome);
          usuarios.setUsuTipo(usuTipo);
          usuarios.setUsuSenha(usuSenha);
@@ -29,7 +29,7 @@ public class UsuarioBusiness {
          fachada.salvarOsUsuarios(usuarios);
          
      }
-     public void salvarOsUsuarios(long usoCod, String usuNome, String usuTipo, String usuSenha, String usuPesquisa){
+     public void salvarOsUsuarios(int usuarioCod, String usuNome, String usuTipo, String usuSenha, String usuPesquisa){
          throw new UnsupportedOperationException("Not supported yet.");
      }
 }
